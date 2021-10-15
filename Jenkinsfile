@@ -15,7 +15,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                 sh "rm -rf /usr/share/nginx/www"
+                 sh "mkdir /usr/share/nginx/www"
+                 sh "cp -r ${WORKSPACE}/build/   /usr/share/nginx/www"
+                 
+"
             }
         }
     }
