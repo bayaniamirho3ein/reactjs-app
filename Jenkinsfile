@@ -19,7 +19,7 @@ pipeline {
                  sh 'mkdir /usr/share/nginx/www'
                  sh 'cp -r ${WORKSPACE}/build/  /usr/share/nginx/www'
                  
-"
+
             }
         }
     }
