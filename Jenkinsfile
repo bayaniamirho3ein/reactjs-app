@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "npm install"
-                sh "npm run build"
+              echo "build..."
             }
         }
         stage('Test') {
@@ -15,9 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                 sh 'rm -r /usr/share/nginx/www'
-                 sh 'mkdir /usr/share/nginx/www'
-                 sh 'cp -r ${WORKSPACE}/build/  /usr/share/nginx/www'
+              echo "deploy...."
                  
 
             }
